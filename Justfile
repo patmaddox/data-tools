@@ -6,3 +6,6 @@ mount:
 
 backup: mount
   ./lib/backup.sh
+
+umount:
+  ./lib/umount.sh
