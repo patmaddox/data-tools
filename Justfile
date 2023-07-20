@@ -9,3 +9,6 @@ backup: mount
 
 umount:
   ./lib/umount.sh
+
+init:
+  mkdir pending-local archive-local

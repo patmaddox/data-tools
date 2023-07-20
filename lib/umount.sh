@@ -5,4 +5,8 @@ for d in archive pending; do
   if mount | grep -q $local; then
     sudo umount $local
   fi
+
+  if [ -d $local ]; then
+    rmdir $local
+  fi
 done
