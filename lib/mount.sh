@@ -7,6 +7,6 @@ for d in archive pending; do
   fi
 
   if ! mount | grep -q $local; then
-    sudo mount -t nfs -o vers=4 nas:/nas/$d $local
+    mount -t nfs -o vers=4 nas:/nas/$d $local
   fi
 done
