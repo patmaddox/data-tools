@@ -12,3 +12,6 @@ umount:
 
 init:
   @mkdir -p pending-local archive-local
+
+touch: mount
+  @./lib/touch.sh
