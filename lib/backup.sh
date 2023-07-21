@@ -7,5 +7,5 @@ mount_apfs -s com.apple.TimeMachine.${snapshot}.local /System/Volumes/Data /tmp/
 rsync -a /tmp/${snapshot}${HOME}/data/pending-local/ nas:/nas/pending/$(hostname -s)
 umount /tmp/$snapshot
 rmdir /tmp/$snapshot
-ssh nas "sudo sanoid --take-snapshots --quiet"
+ssh nas "TZ=UTC sudo sanoid --take-snapshots --quiet"
 echo "END: $(date)" >> backup.log
