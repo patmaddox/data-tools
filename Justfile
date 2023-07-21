@@ -13,5 +13,5 @@ umount:
 init:
   @mkdir -p pending-local archive-local
 
-touch: mount
-  @./lib/touch.sh
+check: mount
+  @ls {archive,pending}-nas/_NAS > /dev/null 2>&1 || (echo 'missing _NAS file - not connected?' && exit 1)
