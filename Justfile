@@ -1,7 +1,7 @@
 help:
   just -l
 
-mount:
+mount: init
   @./lib/mount.sh
 
 backup: mount
@@ -11,4 +11,4 @@ umount:
   @./lib/umount.sh
 
 init:
-  mkdir pending-local archive-local
+  @mkdir -p pending-local archive-local
