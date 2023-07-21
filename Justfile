@@ -1,10 +1,10 @@
 help:
   just -l
 
-mount: init
+mount:
   @./lib/mount.sh
 
-backup: mount
+backup:
   @./lib/backup.sh
 
 umount:
