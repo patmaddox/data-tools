@@ -1,4 +1,6 @@
 #!/bin/sh
+set -e
+
 for d in archive pending; do
   local="$(pwd)/${d}-nas"
 
