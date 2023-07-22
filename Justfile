@@ -21,3 +21,6 @@ log: check
   @tail -n 4 backup.log
   @echo "canary.log:"
   @ssh nas 'tail /nas/canary/canary.log && echo "now: $(TZ=UTC date)"'
+
+plans: check
+  @cd pending-local && find . -name plan.txt | sed 's|\./||'
