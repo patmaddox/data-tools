@@ -10,3 +10,7 @@ SHELL=/bin/sh
 PATH=/bin:/sbin:/usr/bin:/usr/local/bin
 */15 * * * * cd $HOME/pending && just backup
 ```
+
+## /etc/nfs.conf
+
+`nfs.client.mount.options = vers=4`
