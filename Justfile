@@ -4,6 +4,9 @@ help:
 @backup:
   ./.pending-tools/lib/backup.sh
 
+@id:
+  date "+%y%m%d%H%M%S"
+
 @log:
   echo "backup.log:"
   tail -n 4 .pending-tools/backup.log
