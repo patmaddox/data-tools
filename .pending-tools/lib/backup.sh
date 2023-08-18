@@ -8,5 +8,5 @@ rsync -a --delete --exclude-from=.pending-tools/rsync-ignore /tmp/${snapshot}${H
 umount /tmp/$snapshot
 rmdir /tmp/$snapshot
 tmutil deletelocalsnapshots $snapshot > /dev/null
-# ssh nas "TZ=UTC sudo sanoid --take-snapshots --quiet"
-# echo "END: $(date)" >> backup.log
+ssh nas "TZ=UTC sudo sanoid --take-snapshots --quiet"
+echo "END: $(date)" >> backup.log
