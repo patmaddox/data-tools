@@ -12,3 +12,6 @@ help:
 
 @plans:
   find . -name plan.txt | sed 's|\./||'
+
+@untracked:
+  git status -unormal

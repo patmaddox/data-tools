@@ -14,3 +14,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/local/bin
 ## /etc/nfs.conf
 
 `nfs.client.mount.options = vers=4`
+
+## git config
+
+`git config status.showUntrackedFiles no`
