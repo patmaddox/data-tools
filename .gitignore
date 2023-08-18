@@ -1,5 +1,1 @@
-/archive-local
-/archive-nas
-/pending-local
-/pending-nas
-backup.log
+*.log
