@@ -4,6 +4,9 @@ help:
 @backup:
   ./.pending-tools/lib/backup.sh
 
+@exports:
+  find . -path '*/exports/*' -type f | sed 's|^./||'
+
 @id:
   date "+%y%m%d%H%M%S"
 
