@@ -4,6 +4,9 @@ help:
 @backup:
   ./.pending-tools/lib/backup.sh
 
+@cleansnaps:
+  tmutil listlocalsnapshots / | grep -o '\d\d\d\d-\d\d-\d\d-\d\d\d\d\d\d' | xargs -I {} -n 1 tmutil deletelocalsnapshots {}
+
 @exports:
   find . -path '*/exports/*' -type f | sed 's|^./||'
 
