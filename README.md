@@ -1,4 +1,4 @@
-# pending-tools
+# local-files
 
 - System Settings -> Privacy & Security -> Full Disk Access -> Terminal (enabled)
 - System Settings -> Privacy & Security -> Full Disk Access -> /usr/sbin/cron (enabled)
@@ -8,7 +8,7 @@
 ```
 SHELL=/bin/sh
 PATH=/bin:/sbin:/usr/bin:/usr/local/bin
-*/15 * * * * cd $HOME/pending && just backup
+*/15 * * * * cd $HOME/local-files && just backup
 ```
 
 `.ssh/config`:
