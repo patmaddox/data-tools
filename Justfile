@@ -11,7 +11,7 @@ help:
   find . -path '*/exports/*' -type f | sed 's|^./||'
 
 @notes:
-  find . -iname 'notes.*' -type f | sed 's|^./||'
+  find . \( -iname notes -or -iname 'notes.*' \) -type f | sed 's|^./||'
 
 @id:
   date "+%y%m%d%H%M%S"
