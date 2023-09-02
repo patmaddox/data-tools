@@ -1,7 +1,7 @@
 *.log
 .git
 .gitignore
-.pending-tools
+.lib
 .rsync-ignore
 Justfile
 LICENSE

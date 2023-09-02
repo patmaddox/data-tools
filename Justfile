@@ -2,7 +2,7 @@ help:
   just -l
 
 @backup:
-  ./.pending-tools/lib/backup.sh
+  ./.lib/backup.sh
 
 @cleansnaps:
   tmutil listlocalsnapshots / | grep -o '\d\d\d\d-\d\d-\d\d-\d\d\d\d\d\d' | xargs -I {} -n 1 tmutil deletelocalsnapshots {}
@@ -19,7 +19,7 @@ help:
 @log:
   echo "now: $(TZ=UTC date)"
   echo "backup.log:"
-  tail -n 4 .pending-tools/backup.log
+  tail -n 4 .lib/backup.log
   echo "canary.log:"
   ssh nas 'tail /nas/canary/canary.log'
 
