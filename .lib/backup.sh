@@ -2,9 +2,9 @@
 set -e -o pipefail
 
 # check if keychain is loaded, for SSH via cron
-if ! (security list-keychains | grep -q '/Users/.*/login.keychain-db'); then
-  echo "keychain not loaded"
-  exit 0
+if ! ssh nas "true"; then
+  echo "unable to connect to SSH"
+  exit 1
 fi
 
 backup_log=.lib/backup.log
